@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {Routes, Route } from "react-router-dom";
 import Home from "../home/Home";
-import Footer from "../common/Footer";
-import Footer from "../common/Header";
+import Footer from "../common/footer/Footer";
+import Header from "../common/header/Header";
 import About from "../about/About";
 import Blog from "../blog/Blog";
 import Services from "../services/Services";
@@ -14,17 +14,16 @@ const Pages = () => {
   return (
     <div>
         <>
-      <Router>
+      
         <Header />
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/about' component={About} />
-          <Route exact path='/services' component={Services} />
-          <Route exact path='/blog' component={Blog} />
-          <Route exact path='/contact' component={Contact} />
-        </Switch>
+        <Routes>
+          <Route exact path='/' Component={Home} />
+          <Route exact path='/about' Component={About} />
+          <Route exact path='/services' Component={Services} />
+          <Route exact path='/blog' Component={Blog} />
+          <Route exact path='/contact' Component={Contact} />
+        </Routes>
         <Footer />
-      </Router>
     </>
     </div>
   )
