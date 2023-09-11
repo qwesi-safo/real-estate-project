@@ -1,12 +1,12 @@
 import React from 'react';
 import {Routes, Route } from "react-router-dom";
-import Home from "../home/Home";
+import home from "../home/home";
 import Footer from "../common/footer/Footer";
 import Header from "../common/header/Header";
-import About from "../about/About";
-import Blog from "../blog/Blog";
+import about from "../about/about";
+import blog from "../blog/blog";
 import Services from "../services/Services";
-import Contact from "../contact/Contact";
+import contact from "../contact/contact";
 
 
 
@@ -17,11 +17,11 @@ const Pages = () => {
       
         <Header />
         <Routes>
-          <Route exact path='/' Component={Home} />
-          <Route exact path='/about' Component={About} />
+          <Route exact path='/' Component={home} />
+          <Route exact path='/about' Component={about} />
           <Route exact path='/services' Component={Services} />
-          <Route exact path='/blog' Component={Blog} />
-          <Route exact path='/contact' Component={Contact} />
+          <Route exact path='/blog' Component={blog} />
+          <Route exact path='/contact' Component={contact} />
         </Routes>
         <Footer />
     </>
